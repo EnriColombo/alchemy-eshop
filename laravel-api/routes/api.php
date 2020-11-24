@@ -17,8 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 /** Public routes */
-Route::get('categories', [CategoryController::class, 'index']);
-Route::get('products', [ProductController::class, 'index']);
+Route::apiResources([
+    'categories' => CategoryController::class,
+    'products' => ProductController::class,
+]);
 
 /** Protected routes */
 Route::middleware('auth:api')->get('/user', function (Request $request) {
