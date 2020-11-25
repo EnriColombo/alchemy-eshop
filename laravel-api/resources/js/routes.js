@@ -1,4 +1,5 @@
 import Home from './views/Home'
+import Product from "./views/Product";
 
 export default {
     mode: 'history',
@@ -7,6 +8,11 @@ export default {
         {
             path: '/',
             component: Home
-        }
+        },
+        {
+            path: '/products/:id',
+            component: Product,
+            props: true
+        },
     ]
 }

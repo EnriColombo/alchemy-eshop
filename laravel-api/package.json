@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "startbootstrap-shop-item": "^4.2.3",
         "vue-router": "^3.4.9"
     }
 }
