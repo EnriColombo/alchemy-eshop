@@ -1,9 +1,16 @@
 <template>
-    <div class="col-lg-8 order-md-1">
-        <div class="card mt-4">
+    <div class="col-md-8 order-md-1">
+        <div class="card">
             <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
             <div class="card-body">
-                <h3 class="card-title">{{ details.name }}</h3>
+                <div class="row">
+                    <div class="col">
+                        <h2 class="card-title">{{ details.name }}</h2>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" class="btn btn-success">Aggiungi al carrello</a>
+                    </div>
+                </div>
                 <h4>€{{ details.price }}</h4>
                 <p class="card-text">{{ details.description }}</p>
                 <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
