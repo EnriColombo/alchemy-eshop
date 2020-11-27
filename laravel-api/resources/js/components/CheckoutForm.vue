@@ -143,7 +143,7 @@
                 </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Procedi con l'ordine</button>
+            <button class="btn btn-success btn-lg btn-block" type="submit">Acquista</button>
         </form>
     </div>
 </template>

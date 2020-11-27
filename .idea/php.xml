@@ -119,6 +119,7 @@
       <path value="$PROJECT_DIR$/laravel-api/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/laravel-api/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/laravel-api/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/laravel-api/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

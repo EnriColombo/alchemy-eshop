@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="" />
+    <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Checkout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Checkout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/laravel-api/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,10 +157,13 @@
       <path value="$PROJECT_DIR$/laravel-api/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/laravel-api/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/laravel-api/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/laravel-api/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kNf5ENf8AUcm93Es03684kSyGm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -146,14 +173,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../alchemy-shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel-api/resources/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/laravel-api/resources/css" />
+      <recent name="$PROJECT_DIR$/laravel-api/resources/js" />
+      <recent name="$PROJECT_DIR$/laravel-api/database/seeders" />
+      <recent name="$PROJECT_DIR$/laravel-api/database/migrations" />
+      <recent name="$PROJECT_DIR$/laravel-api/database/factories" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/laravel-api/resources/css" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -164,6 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605545805695</updated>
       <workItem from="1605545809818" duration="7335000" />
+      <workItem from="1606136473486" duration="76921000" />
     </task>
     <servers />
   </component>

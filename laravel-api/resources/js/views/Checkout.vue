@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <CheckoutForm></CheckoutForm>
-            <CartWidget></CartWidget>
+            <CartWidget class="col-md-4 order-md-2"></CartWidget>
         </div>
     </div>
 </template>

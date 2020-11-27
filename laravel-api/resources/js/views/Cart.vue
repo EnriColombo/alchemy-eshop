@@ -7,9 +7,14 @@
             </h4>
             <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <img src="http://placehold.it/120x80" alt="">
                     <div>
                         <h6 class="my-0">Product name</h6>
                         <small class="text-muted">Brief description</small>
+                    </div>
+                    <div>
+                        <h6 class="my-0">Q.ty</h6>
+                        <input type="number" class="form-control" required value="1">
                     </div>
                     <span class="text-muted">$12</span>
                 </li>
@@ -40,14 +45,12 @@
                 </li>
             </ul>
 
-            <form class="card p-2">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Codice promozionale">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-success">Checkout</button>
-                    </div>
+            <div class="card p-2">
+                <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-secondary" @click="goHome">Continua con gli acquisti</button>
+                        <button type="button" class="btn btn-success" @click="goToCheckout">Checkout</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </template>
@@ -56,6 +59,16 @@
 export default {
     name: "Cart",
     props: ['id'],
+    methods: {
+        goToCheckout()
+        {
+            this.$router.push('/checkout')
+        },
+        goHome()
+        {
+            this.$router.push('/')
+        }
+    }
 }
 </script>
 

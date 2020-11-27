@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-4 order-md-2 mb-4">
+    <div class="mb-4">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Il tuo carrello</span>
             <span class="badge badge-secondary badge-pill">3</span>
@@ -38,21 +38,20 @@
                 <strong>€20</strong>
             </li>
         </ul>
-
-        <form class="card p-2">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Promo code">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-secondary">Redeem</button>
-                </div>
-            </div>
-        </form>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary" @click="goToCart" v-show="$route.name != 'checkout'">Vai al carrello</button>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-name: "CartWidget"
+    name: "CartWidget",
+    methods: {
+        goToCart() {
+            this.$router.push('/cart')
+        }
+    }
 }
 </script>
 

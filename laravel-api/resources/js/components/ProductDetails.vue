@@ -3,7 +3,7 @@
         <div class="card">
             <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
             <div class="card-body">
-                <div class="row">
+                <div class="row mb-2">
                     <div class="col">
                         <h2 class="card-title">{{ details.name }}</h2>
                     </div>
@@ -33,7 +33,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
                 <small class="text-muted">Posted by Anonymous on 3/1/17</small>
                 <hr>
-                <a href="#" class="btn btn-success">Leave a Review</a>
+                <a href="#" class="btn btn-secondary">Leave a Review</a>
             </div>
         </div>
         <!-- /.card -->
@@ -49,7 +49,7 @@ export default {
     props: ['productId'],
     data: function () {
         return {
-            details: null
+            details: {}
         }
     },
 
