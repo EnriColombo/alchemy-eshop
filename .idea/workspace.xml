@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/CartItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/CartItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Checkout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Checkout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605545805695</updated>
       <workItem from="1605545809818" duration="7335000" />
-      <workItem from="1606136473486" duration="76921000" />
+      <workItem from="1606136473486" duration="97533000" />
     </task>
     <servers />
   </component>

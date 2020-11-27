@@ -13,11 +13,15 @@ class Customer extends Model
         'name', 'email', 'shipping_address', 'customer_category_id', 'user_id'
     ];
 
-    public function customer_category() {
+    public function customerCategory() {
         return $this->belongsTo(CustomerCategory::class);
     }
 
     public function carts() {
         return $this->hasMany(Cart::class);
+    }
+
+    public function user() {
+        return $this->hasOne(User::class);
     }
 }

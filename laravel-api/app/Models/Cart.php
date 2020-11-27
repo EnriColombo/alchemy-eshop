@@ -17,11 +17,11 @@ class Cart extends Model
         return $this->belongsTo(Customer::class);
     }
 
-    public function cart_items() {
+    public function cartItems() {
         return $this->hasMany(CartItem::class);
     }
 
     public function purchase() {
-        return $this->belongsTo(Purchase::class);
+        return $this->hasOne(Purchase::class);
     }
 }

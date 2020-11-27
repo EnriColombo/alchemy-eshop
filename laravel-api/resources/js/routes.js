@@ -19,10 +19,9 @@ export default {
             props: true
         },
         {
-            path: '/cart', // TODO da parametrizzare in base all'utente e visualizzare solo se autenticato
+            path: '/cart',
             name: 'cart',
             component: Cart,
-            props: true,
             beforeEnter: (to, from, next) => {
                 axios.get('/api/athenticated').then(()=>{
                     next()
@@ -35,7 +34,7 @@ export default {
         {
             path: '/checkout',
             name: 'checkout',
-            component: Checkout, // TODO da parametrizzare in base all'utente e visualizzare solo se autenticato
+            component: Checkout, // TODO da parametrizzare in base all'utente
             props: true,
             beforeEnter: (to, from, next) => {
                 axios.get('/api/athenticated').then(()=>{
