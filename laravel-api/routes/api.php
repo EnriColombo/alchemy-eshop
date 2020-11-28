@@ -31,6 +31,8 @@ Route::middleware('auth:api')->get('/athenticated', function () {
     return true;
 });
 Route::middleware('auth:api')->group(function () {
-//    Route::apiResource('cart', CartController::class);
+    // Show auth user associated cart
     Route::get('cart', [CartController::class, 'show']);
+    // Create a new cart item (a new cart if does not exists)
+    Route::post('cart', [CartController::class, 'store']);
 });

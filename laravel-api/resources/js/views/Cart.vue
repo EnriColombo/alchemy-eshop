@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <div class="col-md-12 mb-4">
+        <div class="col-md-12 mb-4" v-if="!error">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Il tuo carrello</span>
-                <span class="badge badge-secondary badge-pill">3</span>
+                <span class="badge badge-secondary badge-pill">{{ userCart.items_no }}</span>
             </h4>
             <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed" v-for="item in userCart.items" :key="item.id">
@@ -20,7 +20,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Total (EUR)</span>
-                    <strong>€20</strong>
+                    <strong>€{{ userCart.total }}</strong>
                 </li>
             </ul>
 
@@ -31,6 +31,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-12 mb-4" v-if="error">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Il tuo carrello è vuoto</span>
+            </h4>
+            <div class="card p-2">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" @click="goHome">Vai agli acquisti</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -41,17 +53,18 @@ export default {
     name: "Cart",
     data: function () {
         return {
-            userCart: []
+            userCart: [],
+            error: false
         }
     },
     mounted() {
         axios.get('/api/cart')
-            .then((response) => {
+            .then(response => {
                 this.userCart = response.data.data;
-                console.log(JSON.stringify(this.userCart));
             })
-            .catch(function (error) {
-                console.log(error); // TODO gestire errore HTTP 404 (Not Found) => carrello vuoto
+            .catch(error => {
+                this.error = true;
+                console.log(error);
             });
     },
     methods: {

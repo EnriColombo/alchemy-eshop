@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\CartItemResource;
 use App\Http\Resources\CartResource;
 use App\Models\Cart;
+use App\Models\CartItem;
 use App\Models\Customer;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +32,25 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Prende il customer associato allo user autenticato
+        $customer = $this->getAuthCustomer();
+        try {
+            // Prende il cart col customer_id (TODO escludere i carts già acquistati)
+            $customerCart = Cart::select()->where('customer_id', $customer->id)->firstOrFail();
+        } catch (ModelNotFoundException $e) {
+            // Se non esiste crea un cart nuovo
+            $customerCart = Cart::create([
+                'customer_id' => $customer->id
+            ]);
+        }
+        // Crea un nuovo cart_item con cart_id, product_id e quantity = 1
+        $newCartItem = CartItem::create([
+            'cart_id' => $customerCart->id,
+            'product_id' => $request->id,
+            'quantity' => 1
+
+        ]);
+        return new CartItemResource($newCartItem);
     }
 
     /**
@@ -40,12 +61,10 @@ class CartController extends Controller
      */
     public function show()
     {
-        $user = Auth::user();
-        $userCart = Cart::addSelect(['customer_id' => Customer::select('id')
-            ->where('user_id', $user->id) // TODO separare le 2 query, non funziona se l'utente nn ha carrello
-        ])->firstOrFail(); // TODO Aggiungere un flag sui carrelli acquistati per escluderli
-//        return response()->json($userCart);
-        return new CartResource($userCart);
+        $customer = $this->getAuthCustomer();
+        $customerCart = Cart::select()->where('customer_id', $customer->id)->firstOrFail();
+        // TODO Aggiungere un flag sui carrelli acquistati per escluderli
+        return new CartResource($customerCart);
     }
 
     /**
@@ -69,5 +88,16 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Return the customer object associated to auth user
+     * @return Customer
+     */
+    private function getAuthCustomer()
+    {
+        $user = Auth::user();
+        $customer = Customer::select('id')->where('user_id', $user->id)->firstOrFail();
+        return $customer;
     }
 }

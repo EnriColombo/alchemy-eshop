@@ -8,7 +8,7 @@
             <div class="mt-3 mb-4">
                 {{ details.description }}
             </div>
-            <button type="button" class="btn btn-lg btn-block btn-success">Aggiungi al carrello</button>
+            <button type="button" class="btn btn-lg btn-block btn-success" @click="addToCart">Aggiungi al carrello</button>
         </div>
     </div>
 </template>
@@ -42,6 +42,17 @@ export default {
                     // catch errors
                     console.log(error);
                 });
+        },
+        addToCart: function ()
+        {
+            axios.post('/api/cart', this.details)
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            // TODO refresh CartWidget
         }
     }
 }
