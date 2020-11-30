@@ -80,7 +80,8 @@ export default {
                 .catch(function (error) {
                     console.log(error);
                 });
-            // TODO refresh CartWidget
+            // Refresh CartWidget
+            this.$root.$emit('Prodotto aggiunto al carrello');
         }
     }
 }

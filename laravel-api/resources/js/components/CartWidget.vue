@@ -38,18 +38,24 @@ export default {
         }
     },
     mounted() {
-        axios.get('/api/cart')
-            .then(response => {
-                this.userCart = response.data.data;
-            })
-            .catch(error => {
-                this.error = true;
-                console.log(error);
-            });
+        this.loadItems();
+        this.$root.$on('Prodotto aggiunto al carrello', () => {
+            this.loadItems();
+        });
     },
     methods: {
+        loadItems() {
+            axios.get('/api/cart')
+                .then(response => {
+                    this.userCart = response.data.data;
+                })
+                .catch(error => {
+                    this.error = true;
+                    console.log(error);
+                });
+        },
         goToCart() {
-            this.$router.push('/cart')
+            this.$router.push('/cart');
         }
     }
 }
