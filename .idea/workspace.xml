@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CustomerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CustomerCategoryResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CustomerResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CartResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CartResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Purchase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/composer.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductWidget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductWidget.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Checkout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Checkout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +160,7 @@
       <path value="$PROJECT_DIR$/laravel-api/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/laravel-api/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/laravel-api/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/laravel-api/vendor/lcobucci/clock" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kNf5ENf8AUcm93Es03684kSyGm" />
@@ -197,7 +210,7 @@
       <workItem from="1605545809818" duration="7335000" />
       <workItem from="1606136473486" duration="103216000" />
       <workItem from="1606576247563" duration="162000" />
-      <workItem from="1606576432588" duration="18559000" />
+      <workItem from="1606576432588" duration="50088000" />
     </task>
     <servers />
   </component>

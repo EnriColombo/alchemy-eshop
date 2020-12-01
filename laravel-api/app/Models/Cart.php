@@ -10,7 +10,7 @@ class Cart extends Model
     use HasFactory;
 
     protected $fillable = [
-        'customer_id'
+        'customer_id', 'purchased'
     ];
 
     public function customer() {
@@ -23,5 +23,13 @@ class Cart extends Model
 
     public function purchase() {
         return $this->hasOne(Purchase::class);
+    }
+
+    public function cartTotal() {
+        $total = 0;
+        foreach ($this->cartItems as $item) {
+            $total += $item->product->price;
+        }
+        return $total;
     }
 }

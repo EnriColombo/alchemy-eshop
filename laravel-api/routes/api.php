@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\PurchaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,4 +37,8 @@ Route::middleware('auth:api')->group(function () {
     Route::get('cart', [CartController::class, 'show']);
     // Create a new cart item (a new cart if does not exists)
     Route::post('cart', [CartController::class, 'store']);
+    // Show auth user associated customer
+    Route::get('customer', [CustomerController::class, 'show']);
+    //
+    Route::post('purchase', [PurchaseController::class, 'store']);
 });

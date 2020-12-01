@@ -13,7 +13,6 @@ import CheckoutForm from "../components/CheckoutForm";
 
 export default {
 name: "Checkout",
-    props: ['id'],
     components: {
         CheckoutForm,
         CartWidget

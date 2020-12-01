@@ -34,8 +34,7 @@ export default {
         {
             path: '/checkout',
             name: 'checkout',
-            component: Checkout, // TODO da parametrizzare in base all'utente
-            props: true,
+            component: Checkout,
             beforeEnter: (to, from, next) => {
                 axios.get('/api/athenticated').then(()=>{
                     next()

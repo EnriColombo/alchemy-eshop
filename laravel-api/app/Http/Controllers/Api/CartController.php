@@ -8,12 +8,20 @@ use App\Http\Resources\CartResource;
 use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Customer;
+use App\Services\CustomerService;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
+    protected $customerService;
+
+    public function __construct(CustomerService $customerService)
+    {
+        $this->customerService = $customerService;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -33,10 +41,13 @@ class CartController extends Controller
     public function store(Request $request)
     {
         // Prende il customer associato allo user autenticato
-        $customer = $this->getAuthCustomer();
+        $customer = $this->customerService->getAuthCustomer();
         try {
-            // Prende il cart col customer_id (TODO escludere i carts già acquistati)
-            $customerCart = Cart::select()->where('customer_id', $customer->id)->firstOrFail();
+            // Prende il cart col customer_id
+            $customerCart = Cart::select()->where([
+                ['customer_id', $customer->id],
+                ['purchased', false]
+            ])->firstOrFail();
         } catch (ModelNotFoundException $e) {
             // Se non esiste crea un cart nuovo
             $customerCart = Cart::create([
@@ -61,9 +72,11 @@ class CartController extends Controller
      */
     public function show()
     {
-        $customer = $this->getAuthCustomer();
-        $customerCart = Cart::select()->where('customer_id', $customer->id)->firstOrFail();
-        // TODO Aggiungere un flag sui carrelli acquistati per escluderli
+        $customer = $this->customerService->getAuthCustomer();
+        $customerCart = Cart::select()->where([
+            ['customer_id', $customer->id],
+            ['purchased', false]
+        ])->firstOrFail();
         return new CartResource($customerCart);
     }
 
@@ -88,16 +101,5 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    /**
-     * Return the customer object associated to auth user
-     * @return Customer
-     */
-    private function getAuthCustomer()
-    {
-        $user = Auth::user();
-        $customer = Customer::select('id')->where('user_id', $user->id)->firstOrFail();
-        return $customer;
     }
 }

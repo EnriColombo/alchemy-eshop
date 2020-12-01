@@ -21,15 +21,7 @@ class CartResource extends JsonResource
             'customer_id'  => $this->customer_id,
             'items' => $cartItemsCollection,
             'items_no' => $cartItemsCollection->count(),
-            'total' => number_format($this->cartTotal($cartItemsCollection), 2)
+            'total' => number_format($this->cartTotal(), 2)
         ];
-    }
-
-    private function cartTotal($itemsCollection) {
-        $total = 0;
-        foreach ($itemsCollection as $item) {
-            $total += $item->product->price;
-        }
-        return $total;
     }
 }

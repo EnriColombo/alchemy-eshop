@@ -74,7 +74,7 @@ class RegisterController extends Controller
         // Crea il customer associato di tipo 'Lead'
         Customer::create([
             'customer_category_id' => 1,
-            'name' => $user->name,
+            'name' => $user->name, // TODO cambiare in 'username' => $user->name,
             'email' => $user->email,
             'shipping_address' => '',
             'user_id' => $user->id
