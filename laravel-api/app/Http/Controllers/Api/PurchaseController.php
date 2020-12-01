@@ -41,8 +41,14 @@ class PurchaseController extends Controller
         $customer = $this->customerService->getAuthCustomer();
         // Update Customer data
         $customer->email = $request->customer['email'];
-        $customer->shipping_address = $request->customer['shippingaddress'];
-        // TODO aggiungere gli altri campi
+        $customer->shipping_address = $request->customer['shipping_address'];
+        $customer->customer_category_id = 2; // 'Contatto'
+        $customer->firstname = $request->customer['firstname'];
+        $customer->lastname = $request->customer['lastname'];
+        $customer->address = $request->customer['address'];
+        $customer->zip = $request->customer['zip'];
+        $customer->city = $request->customer['city'];
+        $customer->country = $request->customer['country'];
         $customer->save();
         // Customer's cart
         $cart = Cart::select()->where([
@@ -53,12 +59,19 @@ class PurchaseController extends Controller
         Purchase::create([
             'cart_id' => $cart->id,
             'date' => Carbon::now()->format('Y-m-d H:i:s'),
-            'total' => $cart->cartTotal()
-            // TODO aggiungere dati metodo di pagamento
+            'total' => $cart->cartTotal(),
+            'method' => $request->payment['method'],
+            'cardname' => $request->payment['cardname'],
+            'cardnumber' => $request->payment['cardnumber'],
+            'cardexpiration' => Carbon::createFromFormat('Y-m-d', $request->payment['cardexpiration']),
+            'cardcvv' => $request->payment['cardcvv']
         ]);
         // Set flag 'purchased' on Cart
         $cart->purchased = true;
         $cart->save();
+        // Set customer category id to 3 ('Cliente')
+        $customer->customer_category_id = 3;
+        $customer->save();
         return response()->json(['message' => 'success']);
     }
 

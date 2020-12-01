@@ -53,7 +53,7 @@
             </div>
             <div class="mb-3" v-show="!sameAddrChecked">
                 <label for="shipping-address">Indirizzo di spedizione</label>
-                <input type="text" class="form-control" id="shipping-address" placeholder="1234 Main St" required v-model="customerData.shippingaddress">
+                <input type="text" class="form-control" id="shipping-address" placeholder="1234 Main St" required v-model="customerData.shipping_address">
                 <div class="invalid-feedback">
                     Please enter your address.
                 </div>
@@ -198,13 +198,14 @@ export default {
             this.purchaseData.customer = this.customerData;
             this.purchaseData.payment = this.paymentData;
             console.log(JSON.stringify(this.purchaseData));
-            // axios.post('/api/purchase', this.purchaseData)
-            //     .then(function (response) {
-            //         console.log(response);
-            //     })
-            //     .catch(function (error) {
-            //         console.log(error);
-            //     });
+            axios.post('/api/purchase', this.purchaseData)
+                .then(function (response) {
+                    console.log(response);
+                    this.$router.push('/'); // TODO dare un avviso di successo
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         }
     }
 }

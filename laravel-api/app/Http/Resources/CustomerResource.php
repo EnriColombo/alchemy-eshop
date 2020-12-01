@@ -17,11 +17,16 @@ class CustomerResource extends JsonResource
     {
         return [
             'id'  => $this->id,
-            'username' => $this->name, // TODO cambiare in $this->username
+            'username' => $this->username,
             'email' => $this->email,
-//            'first_name' => $this->first_name,
-//            'last_name' => $this->last_name,
-            'category' => new CustomerCategoryResource(CustomerCategory::find($this->customer_category_id))
+            'firstname' => $this->firstname,
+            'lastname' => $this->lastname,
+            'category' => new CustomerCategoryResource(CustomerCategory::find($this->customer_category_id)),
+            'address' => $this->address,
+            'shipping_address' => $this->shipping_address,
+            'zip' => $this->zip,
+            'city' => $this->city,
+            'country' => $this->country,
         ];
     }
 }

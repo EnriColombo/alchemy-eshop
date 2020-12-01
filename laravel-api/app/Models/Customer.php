@@ -10,7 +10,17 @@ class Customer extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'email', 'shipping_address', 'customer_category_id', 'user_id'
+        'username',
+        'email',
+        'shipping_address',
+        'customer_category_id',
+        'user_id',
+        'firstname',
+        'lastname',
+        'address',
+        'zip',
+        'city',
+        'country'
     ];
 
     public function customerCategory() {

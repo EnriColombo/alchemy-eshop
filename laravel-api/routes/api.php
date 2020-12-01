@@ -39,6 +39,6 @@ Route::middleware('auth:api')->group(function () {
     Route::post('cart', [CartController::class, 'store']);
     // Show auth user associated customer
     Route::get('customer', [CustomerController::class, 'show']);
-    //
+    // Purchase
     Route::post('purchase', [PurchaseController::class, 'store']);
 });

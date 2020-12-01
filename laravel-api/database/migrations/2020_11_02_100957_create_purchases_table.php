@@ -18,6 +18,11 @@ class CreatePurchasesTable extends Migration
             $table->timestamp('date');
             $table->foreignId('cart_id')->constrained();
             $table->decimal('total', 22)->default(0.00);
+            $table->string('method')->nullable();
+            $table->string('cardname')->nullable();
+            $table->string('cardnumber')->nullable();
+            $table->timestamp('cardexpiration')->nullable();
+            $table->integer('cardcvv')->nullable();
             $table->timestamps();
         });
     }

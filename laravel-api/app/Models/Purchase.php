@@ -10,6 +10,13 @@ class Purchase extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cart_id', 'date', 'total'
+        'cart_id',
+        'date',
+        'total',
+        'method',
+        'cardname',
+        'cardnumber',
+        'cardexpiration',
+        'cardcvv'
     ];
 }

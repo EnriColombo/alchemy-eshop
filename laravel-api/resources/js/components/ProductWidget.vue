@@ -35,7 +35,6 @@ export default {
             // load API
             await axios.get('/api/products/' + this.productId)
                 .then((response) => {
-                    // assign this.categories
                     this.details = response.data.data;
                 })
                 .catch(function (error) {
@@ -43,16 +42,21 @@ export default {
                     console.log(error);
                 });
         },
-        addToCart: function ()
+        addToCart: async function ()
         {
-            axios.post('/api/cart', this.details)
+            await axios.post('/api/cart', this.details)
                 .then(function (response) {
+                    console.log('then-----------------------');
                     console.log(response);
                 })
                 .catch(function (error) {
+                    console.log('catch-----------------');
                     console.log(error);
+                    // Redirect to Laravel' route 'login'
+                    window.location.href = '/login';
                 });
             // Refresh CartWidget
+            console.log('Refresh CartWidget---------------');
             this.$root.$emit('Prodotto aggiunto al carrello');
         }
     }

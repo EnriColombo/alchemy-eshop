@@ -38,14 +38,15 @@ export default {
         }
     },
     mounted() {
-        this.loadItems();
+        // Listener per refresh su aggiunta nuovo prodotto
         this.$root.$on('Prodotto aggiunto al carrello', () => {
             this.loadItems();
         });
+        this.loadItems();
     },
     methods: {
-        loadItems() {
-            axios.get('/api/cart')
+        async loadItems() {
+            await axios.get('/api/cart')
                 .then(response => {
                     this.userCart = response.data.data;
                 })
