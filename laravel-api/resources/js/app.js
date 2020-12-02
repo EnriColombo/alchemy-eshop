@@ -10,8 +10,10 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router'
 import routes from './routes'
+import Vuelidate from "vuelidate"
 
 Vue.use(VueRouter)
+Vue.use(Vuelidate)
 
 /**
  * The following block of code may be used to automatically register your

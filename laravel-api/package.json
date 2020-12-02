@@ -26,6 +26,7 @@
     "dependencies": {
         "startbootstrap-shop-item": "^4.2.3",
         "v-easy-dialog": "^1.0.5",
-        "vue-router": "^3.4.9"
+        "vue-router": "^3.4.9",
+        "vuelidate": "^0.7.6"
     }
 }

@@ -48,6 +48,7 @@ export default {
         async loadItems() {
             await axios.get('/api/cart')
                 .then(response => {
+                    this.error = false;
                     this.userCart = response.data.data;
                 })
                 .catch(error => {

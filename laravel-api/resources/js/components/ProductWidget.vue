@@ -46,17 +46,14 @@ export default {
         {
             await axios.post('/api/cart', this.details)
                 .then(function (response) {
-                    console.log('then-----------------------');
                     console.log(response);
                 })
                 .catch(function (error) {
-                    console.log('catch-----------------');
                     console.log(error);
                     // Redirect to Laravel' route 'login'
                     window.location.href = '/login';
                 });
             // Refresh CartWidget
-            console.log('Refresh CartWidget---------------');
             this.$root.$emit('Prodotto aggiunto al carrello');
         }
     }

@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 /** Public routes */
 Route::apiResources([
+    // TODO Separare le GET e mettere le POST sotto autenticazione
     'categories' => CategoryController::class,
     'products' => ProductController::class,
 ]);

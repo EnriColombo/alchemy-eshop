@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CustomerResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CustomerResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Purchase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/database/migrations/2020_11_02_093942_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/database/migrations/2020_11_02_093942_create_customers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/database/migrations/2020_11_02_100957_create_purchases_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/database/migrations/2020_11_02_100957_create_purchases_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CartWidget.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductDetails.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductWidget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductWidget.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +203,7 @@
       <workItem from="1606136473486" duration="103216000" />
       <workItem from="1606576247563" duration="162000" />
       <workItem from="1606576432588" duration="50088000" />
-      <workItem from="1606830968476" duration="13791000" />
+      <workItem from="1606830968476" duration="40765000" />
     </task>
     <servers />
   </component>
