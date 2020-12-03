@@ -14,9 +14,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::paginate(9);
+//        return response()->json($request);
+        $categoryArray = $request->categories;
+        $products = Product::when($categoryArray, function ($query, $categoryArray) {
+            return $query->whereIn('product_category_id', $categoryArray);
+        })->paginate(9);
         return ProductResource::collection($products);
     }
 
