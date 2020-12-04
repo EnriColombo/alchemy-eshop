@@ -60,7 +60,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <router-link to="/cart" class="dropdown-item">{{ __('Il mio carrello') }}</router-link>
+                                    @if(Auth::user()->role_id == 1)
+                                        <router-link to="/dashboard" class="dropdown-item">{{ __('Dashboard') }}</router-link>
+                                    @else
+                                        <router-link to="/cart" class="dropdown-item">{{ __('Il mio carrello') }}</router-link>
+                                    @endif
                                     <hr/>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

@@ -2,6 +2,7 @@ import Home from './views/Home'
 import Product from "./views/Product";
 import Cart from "./views/Cart";
 import Checkout from "./views/Checkout";
+import Dashboard from "./views/Dashboard";
 
 export default {
     mode: 'history',
@@ -23,7 +24,7 @@ export default {
             name: 'cart',
             component: Cart,
             beforeEnter: (to, from, next) => {
-                axios.get('/api/athenticated').then(()=>{
+                axios.get('/api/authenticated').then(()=>{
                     next()
                 }).catch(()=>{
                     // Redirect to Laravel' route 'login'
@@ -36,7 +37,20 @@ export default {
             name: 'checkout',
             component: Checkout,
             beforeEnter: (to, from, next) => {
-                axios.get('/api/athenticated').then(()=>{
+                axios.get('/api/authenticated').then(()=>{
+                    next()
+                }).catch(()=>{
+                    // Redirect to Laravel' route 'login'
+                    window.location.href = 'login';
+                })
+            }
+        },
+        {
+            path: '/dashboard',
+            name: 'dashboard',
+            component: Dashboard,
+            beforeEnter: (to, from, next) => {
+                axios.get('/api/authenticated/isadmin').then(()=>{
                     next()
                 }).catch(()=>{
                     // Redirect to Laravel' route 'login'

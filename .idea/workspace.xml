@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CategoryList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CategoryList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,11 +207,17 @@
       <workItem from="1606576247563" duration="162000" />
       <workItem from="1606576432588" duration="50088000" />
       <workItem from="1606830968476" duration="40765000" />
-      <workItem from="1607006412627" duration="11314000" />
+      <workItem from="1607006412627" duration="24378000" />
+      <workItem from="1607094169393" duration="254000" />
+      <workItem from="1607094485208" duration="6244000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -30,7 +30,10 @@ Route::apiResources([
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::middleware('auth:api')->get('/athenticated', function () {
+Route::middleware('auth:api')->get('/authenticated', function () {
+    return true;
+});
+Route::middleware(['auth:api', 'api.admin'])->get('/authenticated/isadmin', function () {
     return true;
 });
 Route::middleware('auth:api')->group(function () {

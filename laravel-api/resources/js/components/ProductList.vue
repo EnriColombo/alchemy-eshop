@@ -52,7 +52,6 @@ export default {
                 }
             })
                 .then((response) => {
-                    // console.log(JSON.stringify(response));
                     this.products = response.data;
                     this.loading = false;
                 })

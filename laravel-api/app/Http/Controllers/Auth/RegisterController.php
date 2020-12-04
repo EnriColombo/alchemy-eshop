@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role_id' => ['integer'],
         ]);
     }
 
@@ -65,19 +66,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // Crea l'utente
+        // Crea l'utente di ruolo 'guest' se non diversamente specificato
+        $data['role_id'] = array_key_exists('role_id', $data) ? $data['role_id'] : 0;
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role_id' => $data['role_id']
         ]);
-        // Crea il customer associato di tipo 'Lead'
-        Customer::create([
-            'customer_category_id' => 1,
-            'username' => $user->name,
-            'email' => $user->email,
-            'user_id' => $user->id
-        ]);
+        if ($data['role_id'] == 0) {
+            // Crea il customer associato di tipo 'Lead'
+            Customer::create([
+                'customer_category_id' => 1,
+                'username' => $user->name,
+                'email' => $user->email,
+                'user_id' => $user->id
+            ]);
+        }
         return $user;
     }
 }

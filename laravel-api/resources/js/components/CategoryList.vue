@@ -45,7 +45,6 @@ export default {
                 });
         },
         check: function(e) {
-            // console.log(JSON.stringify(this.checkedCategories));
             // Refresh ProductList
             this.$root.$emit('filtraCategorie', this.checkedCategories);
         }
