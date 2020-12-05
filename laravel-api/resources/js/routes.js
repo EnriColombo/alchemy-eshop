@@ -3,6 +3,7 @@ import Product from "./views/Product";
 import Cart from "./views/Cart";
 import Checkout from "./views/Checkout";
 import Dashboard from "./views/Dashboard";
+import ManageProducts from "./components/dashboard/ManageProducts";
 
 export default {
     mode: 'history',

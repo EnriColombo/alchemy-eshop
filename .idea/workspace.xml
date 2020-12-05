@@ -4,6 +4,7 @@
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
@@ -201,7 +202,7 @@
       <workItem from="1606830968476" duration="40765000" />
       <workItem from="1607006412627" duration="24378000" />
       <workItem from="1607094169393" duration="254000" />
-      <workItem from="1607094485208" duration="8378000" />
+      <workItem from="1607094485208" duration="19496000" />
     </task>
     <servers />
   </component>
