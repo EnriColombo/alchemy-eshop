@@ -1,6 +1,7 @@
 <template>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
         <h2>Prodotti</h2>
+        <button class="btn btn-primary mb-2" @click="notifyClick('ProductCreate')">Nuovo prodotto</button>
         <div class="table-responsive">
             <table class="table table-striped table-sm">
                 <thead>
@@ -14,59 +15,55 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Lorem</td>
-                    <td>ipsum</td>
-                    <td>dolor</td>
-                    <td>199,99</td>
+                <tr v-for="product in products.data" :key="product.id">
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.category.name }}</td>
+                    <td class="text-nowrap">€ {{ product.price }}</td>
                     <td>
+                        <div class="btn-group">
                         <button type="button" class="btn btn-primary btn-sm">Modifica</button>
-                        <button type="button" class="btn btn-danger btn-sm">Rimuovi</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>amet</td>
-                    <td>consectetur</td>
-                    <td>adipiscing</td>
-                    <td>elit</td>
-                    <td>
-                        <button type="button" class="btn btn-primary btn-sm">Modifica</button>
-                        <button type="button" class="btn btn-danger btn-sm">Rimuovi</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Integer</td>
-                    <td>nec</td>
-                    <td>odio</td>
-                    <td>Praesent</td>
-                    <td>
-                        <button type="button" class="btn btn-primary btn-sm">Modifica</button>
-                        <button type="button" class="btn btn-danger btn-sm">Rimuovi</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>libero</td>
-                    <td>Sed</td>
-                    <td>cursus</td>
-                    <td>ante</td>
-                    <td>
-                        <button type="button" class="btn btn-primary btn-sm">Modifica</button>
-                        <button type="button" class="btn btn-danger btn-sm">Rimuovi</button>
+                        <button type="button" class="btn btn-danger btn-sm float-right">Rimuovi</button>
+                        </div>
                     </td>
                 </tr>
                 </tbody>
             </table>
+            <pagination :data="products" @pagination-change-page="loadProducts" align="center"></pagination>
         </div>
     </main>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-    name: "Products"
+    name: "ManageProducts",
+    data: function () {
+      return {
+          products: {},
+      }
+    },
+    mounted() {
+        this.loadProducts();
+    },
+    methods: {
+        notifyClick(componentName) {
+            this.$emit('menuItemClick', componentName)
+        },
+        loadProducts: function (page = 1) {
+            // load API
+            axios.get('/api/products?page=' + page)
+                .then((response) => {
+                    this.products = response.data;
+                })
+                .catch(function (error) {
+                    // catch errors
+                    console.log(error);
+                });
+        }
+    }
 }
 </script>
 

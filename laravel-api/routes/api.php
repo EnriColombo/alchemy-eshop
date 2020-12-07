@@ -22,18 +22,19 @@ use Illuminate\Support\Facades\Route;
 /** Public routes */
 Route::apiResources([
     // TODO Separare le GET e mettere le POST sotto autenticazione
-    'categories' => CategoryController::class,
-    'products' => ProductController::class,
+//    'categories' => CategoryController::class,
+//    'products' => ProductController::class,
 ]);
+Route::get('categories', [CategoryController::class, 'index']);
+Route::get('categories/{id}', [CategoryController::class, 'show']);
+Route::get('products', [ProductController::class, 'index']);
+Route::get('products/{id}', [ProductController::class, 'show']);
 
 /** Protected routes */
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::middleware('auth:api')->get('/authenticated', function () {
-    return true;
-});
-Route::middleware(['auth:api', 'api.admin'])->get('/authenticated/isadmin', function () {
     return true;
 });
 Route::middleware('auth:api')->group(function () {
@@ -45,4 +46,13 @@ Route::middleware('auth:api')->group(function () {
     Route::get('customer', [CustomerController::class, 'show']);
     // Purchase
     Route::post('purchase', [PurchaseController::class, 'store']);
+});
+
+/** Protected routes with admin role */
+Route::middleware(['auth:api', 'api.admin'])->get('/authenticated/isadmin', function () {
+    return true;
+});
+Route::middleware(['auth:api', 'api.admin'])->group(function () {
+    // Products
+    Route::post('products', [ProductController::class, 'store']);
 });

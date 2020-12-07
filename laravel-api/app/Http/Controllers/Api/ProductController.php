@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -16,7 +17,6 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-//        return response()->json($request);
         $categoryArray = $request->categories;
         $products = Product::when($categoryArray, function ($query, $categoryArray) {
             return $query->whereIn('product_category_id', $categoryArray);
@@ -30,17 +30,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        $product = new Product();
-        $product->name = $request->name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->product_category_id = $request->product_category_id;
-        if ($product->save())
-        {
-            return new ProductResource($product);
-        }
+        return Product::create($request->validated());
     }
 
     /**
