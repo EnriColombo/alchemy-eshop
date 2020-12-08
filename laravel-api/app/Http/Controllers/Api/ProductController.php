@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -28,21 +29,23 @@ class ProductController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return ProductResource
      */
     public function store(StoreProductRequest $request)
     {
-        return Product::create($request->validated());
+        $product = Product::create($request->validated());
+        return new ProductResource($product);
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return ProductResource
      */
     public function show($id)
     {
+        // TODO Refactor: passare Product $product come parametro ed eliminare la find()
         $product = Product::findOrFail($id);
         return new ProductResource($product);
     }
@@ -50,35 +53,26 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  UpdateProductRequest  $request
+     * @param  Product  $product
+     * @return ProductResource
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        $product = Product::findOrFail($id);
-        $product->name = $request->name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->product_category_id = $request->product_category_id;
-        if ($product->save())
-        {
-            return new ProductResource($product);
-        }
+        $product->update($request->validated());
+        return new ProductResource($product);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Product  $product
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        $product = Product::findOrFail($id);
-        if ($product->delete())
-        {
-            return new ProductResource($product);
-        }
+        $product->delete();
+        return response()->json();
     }
 }

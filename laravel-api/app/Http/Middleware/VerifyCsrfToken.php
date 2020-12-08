@@ -12,8 +12,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        // TODO solo per test, da togliere
-        'login',
-        'oauth/personal-access-tokens'
+        // Decommentare per test Postman
+//        'login',
+//        'oauth/personal-access-tokens'
     ];
 }

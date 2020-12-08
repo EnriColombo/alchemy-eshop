@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <side-menu v-on:menuItemClick="loadComponent"></side-menu>
-            <component :is="dynamicComponent" v-on:menuItemClick="loadComponent"/>
+            <component :is="dynamicComponent" v-bind="componentParam" v-on:buttonClick="loadComponent"/>
         </div>
     </div>
 </template>
@@ -13,6 +13,7 @@ import SideMenu from "../components/dashboard/SideMenu";
 const DashboardHome = () => import("../components/dashboard/DashboardHome");
 const ManageProducts = () => import("../components/dashboard/ManageProducts");
 const ProductCreate = () => import("../components/dashboard/ProductCreate");
+const ProductEdit = () => import("../components/dashboard/ProductEdit");
 // ...
 
 export default {
@@ -23,8 +24,10 @@ export default {
                 'DashboardHome': DashboardHome,
                 'ManageProducts': ManageProducts,
                 'ProductCreate': ProductCreate,
+                'ProductEdit': ProductEdit,
             },
-            componentToLoad: null
+            componentToLoad: null,
+            componentParam: null
         }
     },
     components: {
@@ -36,10 +39,12 @@ export default {
       }
     },
     mounted() {
+        // Icons
         feather.replace();
     },
     methods: {
-        loadComponent(componentName) {
+        loadComponent(componentName, param) {
+            this.componentParam = param;
             this.componentToLoad = this.componentsMap[componentName];
         }
     }

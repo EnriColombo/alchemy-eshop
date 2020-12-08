@@ -20,11 +20,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 /** Public routes */
-Route::apiResources([
-    // TODO Separare le GET e mettere le POST sotto autenticazione
-//    'categories' => CategoryController::class,
-//    'products' => ProductController::class,
-]);
 Route::get('categories', [CategoryController::class, 'index']);
 Route::get('categories/{id}', [CategoryController::class, 'show']);
 Route::get('products', [ProductController::class, 'index']);
@@ -55,4 +50,6 @@ Route::middleware(['auth:api', 'api.admin'])->get('/authenticated/isadmin', func
 Route::middleware(['auth:api', 'api.admin'])->group(function () {
     // Products
     Route::post('products', [ProductController::class, 'store']);
+    Route::put('products/{product}', [ProductController::class, 'update']);
+    Route::delete('products/{product}', [ProductController::class, 'destroy']);
 });

@@ -23,8 +23,8 @@
                     <td class="text-nowrap">€ {{ product.price }}</td>
                     <td>
                         <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm">Modifica</button>
-                        <button type="button" class="btn btn-danger btn-sm float-right">Rimuovi</button>
+                        <button type="button" class="btn btn-primary btn-sm" @click="notifyClick('ProductEdit', {product: product})">Modifica</button>
+                        <button type="button" class="btn btn-danger btn-sm float-right" @click="deleteProduct(product)">Rimuovi</button>
                         </div>
                     </td>
                 </tr>
@@ -49,8 +49,8 @@ export default {
         this.loadProducts();
     },
     methods: {
-        notifyClick(componentName) {
-            this.$emit('menuItemClick', componentName)
+        notifyClick(componentName, param) {
+            this.$emit('buttonClick', componentName, param)
         },
         loadProducts: function (page = 1) {
             // load API
@@ -62,6 +62,13 @@ export default {
                     // catch errors
                     console.log(error);
                 });
+        },
+        deleteProduct(product) {
+            axios.delete('/api/products/' + product.id, product).then(response => {
+                this.loadProducts(this.products.meta.current_page);
+            }).catch(error => {
+                console.log(error);
+            });
         }
     }
 }
