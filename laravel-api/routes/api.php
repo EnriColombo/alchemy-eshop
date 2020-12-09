@@ -54,4 +54,7 @@ Route::middleware(['auth:api', 'api.admin'])->group(function () {
     Route::post('products', [ProductController::class, 'store']);
     Route::put('products/{product}', [ProductController::class, 'update']);
     Route::delete('products/{product}', [ProductController::class, 'destroy']);
+    // Categories
+    Route::delete('categories/{productCategory}', [CategoryController::class, 'destroy']);
+
 });

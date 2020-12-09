@@ -60,8 +60,14 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(ProductCategory $productCategory)
     {
-        //
+        $productCategory->delete();
+        // return response
+        $response = [
+            'success' => true,
+            'message' => 'Category deleted successfully.',
+        ];
+        return response()->json($response, 200);
     }
 }

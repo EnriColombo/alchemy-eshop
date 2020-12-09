@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CartResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CartResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Resources/ProductCategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Resources/ProductCategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/ProductCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/ProductCategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductWidget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/ProductWidget.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageProducts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageProducts.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/SideMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +207,7 @@
       <workItem from="1607094169393" duration="254000" />
       <workItem from="1607094485208" duration="20314000" />
       <workItem from="1607333768547" duration="19726000" />
-      <workItem from="1607361807619" duration="39831000" />
+      <workItem from="1607361807619" duration="46487000" />
     </task>
     <servers />
   </component>

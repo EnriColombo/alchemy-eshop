@@ -15,15 +15,21 @@
                     </button>
                 </li>
                 <li class="nav-item mb-2">
-                    <button class="btn btn-link">
+                    <button class="btn btn-link" @click="notifyClick('ManageCategories')">
                         <span data-feather="file"></span>
                         Categorie
                     </button>
                 </li>
                 <li class="nav-item mb-2">
-                    <button class="btn btn-link">
+                    <button class="btn btn-link" @click="notifyClick('ManageCustomers')">
                         <span data-feather="users"></span>
                         Clienti
+                    </button>
+                </li>
+                <li class="nav-item mb-2">
+                    <button class="btn btn-link" @click="notifyClick('ManagePurchases')">
+                        <span data-feather="file-text"></span>
+                        Ordini
                     </button>
                 </li>
             </ul>

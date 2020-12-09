@@ -14,6 +14,9 @@ const DashboardHome = () => import("../components/dashboard/DashboardHome");
 const ManageProducts = () => import("../components/dashboard/ManageProducts");
 const ProductCreate = () => import("../components/dashboard/ProductCreate");
 const ProductEdit = () => import("../components/dashboard/ProductEdit");
+const ManageCategories = () => import("../components/dashboard/ManageCategories");
+const ManageCustomers = () => import("../components/dashboard/ManageCustomers")
+const ManagePurchases = () => import("../components/dashboard/ManagePurchases")
 // ...
 
 export default {
@@ -25,6 +28,9 @@ export default {
                 'ManageProducts': ManageProducts,
                 'ProductCreate': ProductCreate,
                 'ProductEdit': ProductEdit,
+                'ManageCategories': ManageCategories,
+                'ManageCustomers': ManageCustomers,
+                'ManagePurchases': ManagePurchases
             },
             componentToLoad: null,
             componentParam: null
