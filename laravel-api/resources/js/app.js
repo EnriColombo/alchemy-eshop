@@ -11,9 +11,12 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router'
 import routes from './routes'
 import Vuelidate from "vuelidate"
+import VueChartkick from "vue-chartkick";
+import Chart from 'chart.js'
 
 Vue.use(VueRouter)
 Vue.use(Vuelidate)
+Vue.use(VueChartkick.use(Chart))
 
 /**
  * The following block of code may be used to automatically register your

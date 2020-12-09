@@ -15,6 +15,7 @@ const ManageProducts = () => import("../components/dashboard/ManageProducts");
 const ProductCreate = () => import("../components/dashboard/ProductCreate");
 const ProductEdit = () => import("../components/dashboard/ProductEdit");
 const ManageCategories = () => import("../components/dashboard/ManageCategories");
+const CategoryCreate = () => import("../components/dashboard/CategoryCreate")
 const ManageCustomers = () => import("../components/dashboard/ManageCustomers")
 const ManagePurchases = () => import("../components/dashboard/ManagePurchases")
 // ...
@@ -29,6 +30,7 @@ export default {
                 'ProductCreate': ProductCreate,
                 'ProductEdit': ProductEdit,
                 'ManageCategories': ManageCategories,
+                'CategoryCreate': CategoryCreate,
                 'ManageCustomers': ManageCustomers,
                 'ManagePurchases': ManagePurchases
             },
