@@ -32,4 +32,8 @@ class Cart extends Model
         }
         return $total;
     }
+
+    public function itemsCount() {
+        return $this->cartItems->count();
+    }
 }

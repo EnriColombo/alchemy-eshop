@@ -18,7 +18,7 @@ import axios from "axios";
 
 export default {
     name: "ProductWidget",
-    props: ['productId'],
+    props: ['productId'], // TODO Valutare se passare tutto l'oggetto product ed evitare una get
     data: function () {
         return {
             details: {}

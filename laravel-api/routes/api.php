@@ -33,13 +33,15 @@ Route::middleware('auth:api')->get('/authenticated', function () {
     return true;
 });
 Route::middleware('auth:api')->group(function () {
+    // Show auth user associated customer
+    Route::get('customer', [CustomerController::class, 'show']);
     // Show auth user associated cart
     Route::get('cart', [CartController::class, 'show']);
     // Create a new cart item (a new cart if does not exists)
     Route::post('cart', [CartController::class, 'store']);
-    // Show auth user associated customer
-    Route::get('customer', [CustomerController::class, 'show']);
-    // Purchase
+    // Delete a cart item (delete cart if it is empty)
+    Route::delete('cart/{cartItem}', [CartController::class, 'destroy']);
+    // Create a new Purchase
     Route::post('purchase', [PurchaseController::class, 'store']);
 });
 

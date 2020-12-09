@@ -9,6 +9,7 @@ use App\Models\Cart;
 use App\Models\CartItem;
 use App\Models\Customer;
 use App\Services\CustomerService;
+use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +34,7 @@ class CartController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Crea un nuovo cart_item e, se non esiste il carrello, lo crea.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -65,7 +66,7 @@ class CartController extends Controller
     }
 
     /**
-     * Display the specified resource
+     * Display the specified cart
      * of the authenticated user.
      *
      * @return CartResource
@@ -73,11 +74,15 @@ class CartController extends Controller
     public function show()
     {
         $customer = $this->customerService->getAuthCustomer();
-        $customerCart = Cart::select()->where([
-            ['customer_id', $customer->id],
-            ['purchased', false]
-        ])->firstOrFail();
-        return new CartResource($customerCart);
+        try {
+            $customerCart = Cart::select()->where([
+                ['customer_id', $customer->id],
+                ['purchased', false]
+            ])->firstOrFail();
+            return new CartResource($customerCart);
+        } catch (ModelNotFoundException $e) {
+            return response(['message' => 'Carrello vuoto.'], 404);
+        }
     }
 
     /**
@@ -93,13 +98,25 @@ class CartController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Rimuove un cart_item dal carrello e se questo è vuoto lo elimina.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(CartItem $cartItem)
     {
-        //
+        $cartItem->delete();
+        try {
+            $cart = Cart::findOrFail($cartItem->cart_id);
+            if ($cart->itemsCount() == 0) {
+                $cart->delete();
+            }
+        } catch (ModelNotFoundException $e) {}
+        // return response
+        $response = [
+            'success' => true,
+            'message' => 'Item deleted successfully.',
+        ];
+        return response()->json($response, 200);
     }
 }

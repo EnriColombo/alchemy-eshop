@@ -64,11 +64,13 @@ export default {
                 });
         },
         deleteProduct(product) {
-            axios.delete('/api/products/' + product.id, product).then(response => {
-                this.loadProducts(this.products.meta.current_page);
-            }).catch(error => {
-                console.log(error);
-            });
+            if (confirm("Confermi l'eliminazione del prodotto?")) {
+                axios.delete('/api/products/' + product.id, product).then(response => {
+                    this.loadProducts(this.products.meta.current_page);
+                }).catch(error => {
+                    console.log(error);
+                });
+            }
         }
     }
 }

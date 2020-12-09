@@ -8,18 +8,23 @@
             <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed" v-for="item in userCart.items" :key="item.id">
                     <img src="http://placehold.it/120x80" alt="">
-                    <div class="m-3">
+                    <div class="col m-3">
                         <h6 class="my-0">{{ item.product.name }}</h6>
                         <small class="text-muted">{{ item.product.description }}</small>
                     </div>
-                    <div>
-                        <h6 class="my-0">Q.ty</h6>
+                    <div class="col-sm-1">
+                        <h6 class="mb-2">Q.ta'</h6>
                         <input type="number" class="form-control" required value="1">
                     </div>
-                    <span class="text-muted ml-3">€{{ item.product.price }}</span>
+                    <div class="d-flex align-items-end flex-column ml-3">
+                        <div class="text-muted">€{{ item.product.price }}</div>
+                        <div class="mt-auto">
+                            <button class="btn btn-danger btn-sm" @click="deleteItem(item)">Elimina</button>
+                        </div>
+                    </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                    <span>Total (EUR)</span>
+                    <span>Totale (EUR)</span>
                     <strong>€{{ userCart.total }}</strong>
                 </li>
             </ul>
@@ -53,21 +58,35 @@ export default {
     name: "Cart",
     data: function () {
         return {
-            userCart: [],
+            userCart: {},
             error: false
         }
     },
     mounted() {
-        axios.get('/api/cart')
-            .then(response => {
-                this.userCart = response.data.data;
-            })
-            .catch(error => {
-                this.error = true;
-                console.log(error);
-            });
+        this.loadItems();
     },
     methods: {
+        loadItems() {
+            axios.get('/api/cart')
+                .then(response => {
+                    this.userCart = response.data.data;
+                })
+                .catch(error => {
+                    this.error = true;
+                    console.log(error);
+                });
+        },
+        deleteItem(item) {
+            if (confirm("Vuoi rimuovere il prodotto dal carrello?")) {
+                axios.delete('/api/cart/' + item.id, item).then(response => {
+                    // Non aggiorna il totale
+                    // this.userCart.items.splice(this.userCart.items.indexOf(item), 1);
+                    this.loadItems();
+                }).catch(error => {
+                    console.log(error);
+                });
+            }
+        },
         goToCheckout()
         {
             this.$router.push('/checkout')
@@ -76,7 +95,6 @@ export default {
         {
             this.$router.push('/')
         }
-        // TODO funzione elimina prodotti
     }
 }
 </script>
