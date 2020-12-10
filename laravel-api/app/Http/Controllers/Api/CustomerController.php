@@ -21,11 +21,11 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        //
+        return CustomerResource::collection(Customer::paginate(10));
     }
 
     /**
@@ -40,16 +40,27 @@ class CustomerController extends Controller
     }
 
     /**
+     * Display auth user associated customer.
+     *
+     * @return CustomerResource
+     */
+    public function getAuthCustomer()
+    {
+        $customer = $this->customerService->getAuthCustomer();
+        return new CustomerResource($customer);
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $customer = $this->customerService->getAuthCustomer();
-        return new CustomerResource($customer);
+
     }
+
 
     /**
      * Update the specified resource in storage.

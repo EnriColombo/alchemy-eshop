@@ -34,7 +34,7 @@ Route::middleware('auth:api')->get('/authenticated', function () {
 });
 Route::middleware('auth:api')->group(function () {
     // Show auth user associated customer
-    Route::get('customer', [CustomerController::class, 'show']);
+    Route::get('customer', [CustomerController::class, 'getAuthCustomer']);
     // Show auth user associated cart
     Route::get('cart', [CartController::class, 'show']);
     // Create a new cart item (a new cart if does not exists)
@@ -58,5 +58,6 @@ Route::middleware(['auth:api', 'api.admin'])->group(function () {
     Route::post('categories', [CategoryController::class, 'store']);
     Route::put('categories/{productCategory}', [CategoryController::class, 'update']);
     Route::delete('categories/{productCategory}', [CategoryController::class, 'destroy']);
-
+    // Customers
+    Route::apiResource('customers', CustomerController::class);
 });

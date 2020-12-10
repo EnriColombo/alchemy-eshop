@@ -18,6 +18,7 @@ const ManageCategories = () => import("../components/dashboard/ManageCategories"
 const CategoryCreate = () => import("../components/dashboard/CategoryCreate");
 const CategoryEdit = () => import("../components/dashboard/CategoryEdit");
 const ManageCustomers = () => import("../components/dashboard/ManageCustomers");
+const CustomerDetails = () => import("../components/dashboard/CustomerDetails")
 const ManagePurchases = () => import("../components/dashboard/ManagePurchases");
 // ...
 
@@ -34,6 +35,7 @@ export default {
                 'CategoryCreate': CategoryCreate,
                 'CategoryEdit': CategoryEdit,
                 'ManageCustomers': ManageCustomers,
+                'CustomerDetails': CustomerDetails,
                 'ManagePurchases': ManagePurchases
             },
             componentToLoad: null,
