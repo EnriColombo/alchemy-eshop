@@ -19,7 +19,7 @@
                     <td>{{ category.products_no }}</td>
                     <td>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-primary btn-sm" @click="notifyClick('categoryEdit', {category: category})">Modifica</button>
+                            <button type="button" class="btn btn-primary btn-sm" @click="notifyClick('CategoryEdit', {category: category})">Modifica</button>
                             <button type="button" class="btn btn-danger btn-sm float-right" @click="deleteCategory(category)" :disabled="category.products_no != 0">Rimuovi</button>
                         </div>
                     </td>
@@ -37,7 +37,7 @@ export default {
     name: "ManageCategories",
     data: function () {
         return {
-            categories: {},
+            categories: [],
         }
     },
     mounted() {

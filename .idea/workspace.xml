@@ -5,11 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/6.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/DashboardHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/DashboardHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCategories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCategories.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
     </list>
@@ -209,7 +211,7 @@
       <workItem from="1607094169393" duration="254000" />
       <workItem from="1607094485208" duration="20314000" />
       <workItem from="1607333768547" duration="19726000" />
-      <workItem from="1607361807619" duration="50233000" />
+      <workItem from="1607361807619" duration="56335000" />
     </task>
     <servers />
   </component>
