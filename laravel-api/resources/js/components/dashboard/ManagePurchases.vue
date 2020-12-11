@@ -19,7 +19,7 @@
                     <td>{{ purchase.date }}</td>
                     <td>{{ purchase.cart.customer.firstname }} {{ purchase.cart.customer.lastname }}</td>
                     <td>{{ purchase.cart.items_no }}</td>
-                    <td>{{ purchase.total }}</td>
+                    <td>€ {{ purchase.total }}</td>
                     <td>
                         <button type="button" class="btn btn-primary btn-sm"
                                 @click="notifyClick('PurchaseDetails', {purchase: purchase})">
@@ -56,7 +56,6 @@ export default {
             axios.get('/api/purchases?page=' + page)
                 .then((response) => {
                     this.purchases = response.data;
-                    console.log(JSON.stringify(this.purchases));
                 })
                 .catch(function (error) {
                     // catch errors

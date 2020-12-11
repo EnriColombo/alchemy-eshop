@@ -3,6 +3,12 @@
         <h3 class="mb-4">Dettagli cliente</h3>
         <form>
             <div class="form-group row">
+                <label for="customer_category_id" class="col-md-2 col-form-label text-md-right">Categoria</label>
+                <div class="col-md-6">
+                    <input class="form-control" id="customer_category_id" name="customer_category_id" v-model="customer.category.name" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="username" class="col-md-2 col-form-label text-md-right">Username</label>
                 <div class="col-md-6">
                     <input id="username" type="text" class="form-control" name="username" v-model="customer.username" disabled>
@@ -12,12 +18,6 @@
                 <label for="email" class="col-md-2 col-form-label text-md-right">Email</label>
                 <div class="col-md-6">
                     <input id="email" type="email" class="form-control" name="email" v-model="customer.email" disabled>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="customer_category_id" class="col-md-2 col-form-label text-md-right">Categoria</label>
-                <div class="col-md-6">
-                    <input class="form-control" id="customer_category_id" name="customer_category_id" v-model="customer.category.name" disabled>
                 </div>
             </div>
             <div class="form-group row">
@@ -62,6 +62,14 @@
                     <input id="shipping_address" type="text" class="form-control" name="shipping_address" v-model="customer.shipping_address" disabled>
                 </div>
             </div>
+            <div class="form-group row mb-0">
+                <div class="col-md-8 offset-md-2">
+                    <button type="button" class="btn btn-primary"
+                        @click="notifyClick('ManageCustomers')">
+                        Indietro
+                    </button>
+                </div>
+            </div>
         </form>
     </main>
 </template>
@@ -69,7 +77,12 @@
 <script>
 export default {
     name: "CustomerDetails",
-    props: ['customer']
+    props: ['customer'],
+    methods: {
+        notifyClick(componentName, param) {
+            this.$emit('buttonClick', componentName, param)
+        }
+    }
 }
 </script>
 

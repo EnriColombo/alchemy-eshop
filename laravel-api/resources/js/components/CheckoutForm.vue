@@ -109,12 +109,12 @@
                 <div class="custom-control custom-radio">
                     <input id="credit" value="credit" name="paymentMethod" type="radio" class="custom-control-input"
                            checked v-model="paymentData.method">
-                    <label class="custom-control-label" for="credit">Credit card</label>
+                    <label class="custom-control-label" for="credit">Carta di credito</label>
                 </div>
                 <div class="custom-control custom-radio">
                     <input id="debit" value="debit" name="paymentMethod" type="radio" class="custom-control-input"
                            v-model="paymentData.method">
-                    <label class="custom-control-label" for="debit">Debit card</label>
+                    <label class="custom-control-label" for="debit">Carta di debito</label>
                 </div>
                 <div class="custom-control custom-radio">
                     <input id="paypal" value="paypal" name="paymentMethod" type="radio" class="custom-control-input"
@@ -127,7 +127,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="cc-name">Name on card</label>
+                    <label for="cc-name">Intestazione carta</label>
                     <input type="text" class="form-control" id="cc-name" placeholder="" v-model="paymentData.cardname">
                     <small class="text-muted">Full name as displayed on card</small>
                     <div class="text-danger" v-if="!$v.paymentData.cardname.required && $v.paymentData.cardname.$dirty">
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="cc-number">Credit card number</label>
+                    <label for="cc-number">Numero carta</label>
                     <input type="number" class="form-control" id="cc-number" placeholder="" required
                            v-model="paymentData.cardnumber">
                     <div class="text-danger"
@@ -146,7 +146,7 @@
             </div>
             <div class="row">
                 <div class="col-md-3 mb-3">
-                    <label for="cc-expiration">Expiration</label>
+                    <label for="cc-expiration">Scadenza</label>
                     <input type="date" class="form-control" id="cc-expiration" placeholder="" required
                            v-model="paymentData.cardexpiration">
                     <div class="text-danger"

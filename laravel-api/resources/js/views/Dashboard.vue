@@ -20,6 +20,7 @@ const CategoryEdit = () => import("../components/dashboard/CategoryEdit");
 const ManageCustomers = () => import("../components/dashboard/ManageCustomers");
 const CustomerDetails = () => import("../components/dashboard/CustomerDetails")
 const ManagePurchases = () => import("../components/dashboard/ManagePurchases");
+const PurchaseDetails = () => import("../components/dashboard/PurchaseDetails")
 // ...
 
 export default {
@@ -36,7 +37,8 @@ export default {
                 'CategoryEdit': CategoryEdit,
                 'ManageCustomers': ManageCustomers,
                 'CustomerDetails': CustomerDetails,
-                'ManagePurchases': ManagePurchases
+                'ManagePurchases': ManagePurchases,
+                'PurchaseDetails': PurchaseDetails
             },
             componentToLoad: null,
             componentParam: null

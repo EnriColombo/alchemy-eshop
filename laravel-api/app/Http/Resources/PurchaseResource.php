@@ -19,12 +19,12 @@ class PurchaseResource extends JsonResource
         return [
             'id'  => $this->id,
             'cart' => new CartResource(Cart::find($this->cart_id)),
-            'date' => Carbon::parse($this->date)->format('d/m/Y'),
+            'date' => Carbon::parse($this->date)->format('d.m.Y'),
             'total' => $this->total,
             'method' => $this->method,
             'cardname' => $this->cardname,
             'cardnumber' => $this->cardnumber,
-            'cardexpiration' => $this->cardexpiration,
+            'cardexpiration' => Carbon::parse($this->cardexpiration)->format('d.m.Y'),
             'cardcvv' => $this->cardcvv
         ];
     }
