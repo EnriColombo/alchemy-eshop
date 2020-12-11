@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PurchaseResource;
 use App\Models\Cart;
 use App\Models\Customer;
 use App\Models\Purchase;
@@ -23,11 +24,11 @@ class PurchaseController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        //
+        return PurchaseResource::collection(Purchase::paginate(10));
     }
 
     /**

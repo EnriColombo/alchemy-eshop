@@ -42,7 +42,7 @@ Route::middleware('auth:api')->group(function () {
     // Delete a cart item (delete cart if it is empty)
     Route::delete('cart/{cartItem}', [CartController::class, 'destroy']);
     // Create a new Purchase
-    Route::post('purchase', [PurchaseController::class, 'store']);
+    Route::post('purchases', [PurchaseController::class, 'store']);
 });
 
 /** Protected routes with admin role */
@@ -60,4 +60,6 @@ Route::middleware(['auth:api', 'api.admin'])->group(function () {
     Route::delete('categories/{productCategory}', [CategoryController::class, 'destroy']);
     // Customers
     Route::apiResource('customers', CustomerController::class);
+    // Purchases
+    Route::apiResource('purchases', PurchaseController::class)->except(['store']);
 });

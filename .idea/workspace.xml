@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alchemy-eshop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/public/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CartResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Resources/CartResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/app/Models/Purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Models/Purchase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/public/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/7.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/CheckoutForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCustomers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCustomers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManagePurchases.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManagePurchases.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +215,7 @@
       <workItem from="1607094485208" duration="20314000" />
       <workItem from="1607333768547" duration="19726000" />
       <workItem from="1607361807619" duration="61742000" />
-      <workItem from="1607623824556" duration="3454000" />
+      <workItem from="1607623824556" duration="14116000" />
     </task>
     <servers />
   </component>

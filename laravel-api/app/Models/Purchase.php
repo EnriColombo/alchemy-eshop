@@ -19,4 +19,8 @@ class Purchase extends Model
         'cardexpiration',
         'cardcvv'
     ];
+
+    public function cart() {
+        return $this->belongsTo(Cart::class);
+    }
 }

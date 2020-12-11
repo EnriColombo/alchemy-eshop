@@ -8,15 +8,17 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import VueRouter from 'vue-router'
-import routes from './routes'
-import Vuelidate from "vuelidate"
+import VueRouter from 'vue-router';
+import routes from './routes';
+import Vuelidate from "vuelidate";
 import VueChartkick from "vue-chartkick";
-import Chart from 'chart.js'
+import Chart from 'chart.js';
+import VueSweetalert2 from 'vue-sweetalert2';
 
-Vue.use(VueRouter)
-Vue.use(Vuelidate)
-Vue.use(VueChartkick.use(Chart))
+Vue.use(VueRouter);
+Vue.use(Vuelidate);
+Vue.use(VueChartkick.use(Chart));
+Vue.use(VueSweetalert2);
 
 /**
  * The following block of code may be used to automatically register your

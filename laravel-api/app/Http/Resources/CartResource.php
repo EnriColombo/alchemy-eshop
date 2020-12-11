@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use App\Models\CartItem;
+use App\Models\Customer;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CartResource extends JsonResource
@@ -18,6 +19,7 @@ class CartResource extends JsonResource
         return [
             'id'  => $this->id,
             'customer_id'  => $this->customer_id,
+            'customer' => new CustomerResource(Customer::find($this->customer_id)),
             'items' => CartItemResource::collection($this->cartItems),
             'items_no' => $this->itemsCount(),
             'total' => number_format($this->cartTotal(), 2)

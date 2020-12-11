@@ -5,15 +5,19 @@
             <div class="row">
                 <div class="col-md-6 mb-3 form-group">
                     <label for="firstName">Nome</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" v-model.trim="customerData.firstname">
-                    <div class="text-danger" v-if="!$v.customerData.firstname.required && $v.customerData.firstname.$dirty">
+                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                           v-model.trim="customerData.firstname">
+                    <div class="text-danger"
+                         v-if="!$v.customerData.firstname.required && $v.customerData.firstname.$dirty">
                         Valid first name is required.
                     </div>
                 </div>
                 <div class="col-md-6 mb-3 form-group">
                     <label for="lastName">Cognome</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="" value="" v-model.trim="customerData.lastname">
-                    <div class="text-danger" v-if="!$v.customerData.lastname.required && $v.customerData.lastname.$dirty">
+                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                           v-model.trim="customerData.lastname">
+                    <div class="text-danger"
+                         v-if="!$v.customerData.lastname.required && $v.customerData.lastname.$dirty">
                         Valid last name is required.
                     </div>
                 </div>
@@ -25,8 +29,10 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">@</span>
                     </div>
-                    <input type="text" class="form-control" id="username" placeholder="Username" v-model.trim="customerData.username">
-                    <div class="text-danger" style="width: 100%;" v-if="!$v.customerData.username.required && $v.customerData.username.$dirty">
+                    <input type="text" class="form-control" id="username" placeholder="Username"
+                           v-model.trim="customerData.username">
+                    <div class="text-danger" style="width: 100%;"
+                         v-if="!$v.customerData.username.required && $v.customerData.username.$dirty">
                         Your username is required.
                     </div>
                 </div>
@@ -34,27 +40,33 @@
 
             <div class="mb-3">
                 <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com" v-model.trim="customerData.email">
-                <div class="text-danger" style="width: 100%;" v-if="(!$v.customerData.email.required || !$v.customerData.email.email) && $v.customerData.email.$dirty">
+                <input type="email" class="form-control" id="email" placeholder="you@example.com"
+                       v-model.trim="customerData.email">
+                <div class="text-danger" style="width: 100%;"
+                     v-if="(!$v.customerData.email.required || !$v.customerData.email.email) && $v.customerData.email.$dirty">
                     Please enter a valid email address for shipping updates.
                 </div>
             </div>
 
             <div class="mb-3">
                 <label for="address">Indirizzo</label>
-                <input type="text" class="form-control" id="address" placeholder="1234 Main St" v-model="customerData.address">
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                       v-model="customerData.address">
                 <div class="text-danger" v-if="!$v.customerData.address.required && $v.customerData.address.$dirty">
                     Please enter your address.
                 </div>
             </div>
             <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="same-address" checked v-model="sameAddrChecked">
-                <label class="custom-control-label" for="same-address">L'indirizzo di spedizione è lo stesso dell'indirizzo di fatturazione</label>
+                <label class="custom-control-label" for="same-address">L'indirizzo di spedizione è lo stesso
+                    dell'indirizzo di fatturazione</label>
             </div>
             <div class="mb-3" v-show="!sameAddrChecked">
                 <label for="shipping-address">Indirizzo di spedizione</label>
-                <input type="text" class="form-control" id="shipping-address" placeholder="1234 Main St" v-model="customerData.shipping_address">
-                <div class="text-danger" v-if="!$v.customerData.shipping_address.required && !sameAddrChecked && $v.customerData.shipping_address.$dirty">
+                <input type="text" class="form-control" id="shipping-address" placeholder="1234 Main St"
+                       v-model="customerData.shipping_address">
+                <div class="text-danger"
+                     v-if="!$v.customerData.shipping_address.required && !sameAddrChecked && $v.customerData.shipping_address.$dirty">
                     Please enter your shipping address.
                 </div>
             </div>
@@ -95,15 +107,18 @@
 
             <div class="d-block my-3">
                 <div class="custom-control custom-radio">
-                    <input id="credit" value="credit" name="paymentMethod" type="radio" class="custom-control-input" checked v-model="paymentData.method">
+                    <input id="credit" value="credit" name="paymentMethod" type="radio" class="custom-control-input"
+                           checked v-model="paymentData.method">
                     <label class="custom-control-label" for="credit">Credit card</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input id="debit" value="debit" name="paymentMethod" type="radio" class="custom-control-input" v-model="paymentData.method">
+                    <input id="debit" value="debit" name="paymentMethod" type="radio" class="custom-control-input"
+                           v-model="paymentData.method">
                     <label class="custom-control-label" for="debit">Debit card</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input id="paypal" value="paypal" name="paymentMethod" type="radio" class="custom-control-input" v-model="paymentData.method">
+                    <input id="paypal" value="paypal" name="paymentMethod" type="radio" class="custom-control-input"
+                           v-model="paymentData.method">
                     <label class="custom-control-label" for="paypal">Paypal</label>
                 </div>
                 <div class="text-danger" v-if="!$v.paymentData.method.required && $v.paymentData.method.$dirty">
@@ -121,8 +136,10 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="cc-number">Credit card number</label>
-                    <input type="number" class="form-control" id="cc-number" placeholder="" required v-model="paymentData.cardnumber">
-                    <div class="text-danger" v-if="!$v.paymentData.cardnumber.required && $v.paymentData.cardnumber.$dirty">
+                    <input type="number" class="form-control" id="cc-number" placeholder="" required
+                           v-model="paymentData.cardnumber">
+                    <div class="text-danger"
+                         v-if="!$v.paymentData.cardnumber.required && $v.paymentData.cardnumber.$dirty">
                         Credit card number is required
                     </div>
                 </div>
@@ -130,14 +147,17 @@
             <div class="row">
                 <div class="col-md-3 mb-3">
                     <label for="cc-expiration">Expiration</label>
-                    <input type="date" class="form-control" id="cc-expiration" placeholder="" required v-model="paymentData.cardexpiration">
-                    <div class="text-danger" v-if="!$v.paymentData.cardexpiration.required && $v.paymentData.cardexpiration.$dirty">
+                    <input type="date" class="form-control" id="cc-expiration" placeholder="" required
+                           v-model="paymentData.cardexpiration">
+                    <div class="text-danger"
+                         v-if="!$v.paymentData.cardexpiration.required && $v.paymentData.cardexpiration.$dirty">
                         Expiration date required
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="cc-expiration">CVV</label>
-                    <input type="number" class="form-control" id="cc-cvv" placeholder="" required v-model="paymentData.cardcvv">
+                    <input type="number" class="form-control" id="cc-cvv" placeholder="" required
+                           v-model="paymentData.cardcvv">
                     <div class="text-danger" v-if="!$v.paymentData.cardcvv.required && $v.paymentData.cardcvv.$dirty">
                         Security code required
                     </div>
@@ -151,7 +171,7 @@
 
 <script>
 import axios from "axios";
-import { required, email, requiredIf } from 'vuelidate/lib/validators'
+import {required, email, requiredIf} from 'vuelidate/lib/validators'
 
 export default {
     name: "CheckoutForm",
@@ -227,18 +247,23 @@ export default {
                     console.log(error);
                 });
         },
-        purchase: function ()
-        {
+        purchase: function () {
             this.$v.$touch();
 
             if (!this.$v.customerData.$invalid && !this.$v.paymentData.$invalid) {
                 this.purchaseData.customer = this.customerData;
                 this.purchaseData.payment = this.paymentData;
                 console.log(JSON.stringify(this.purchaseData));
-                axios.post('/api/purchase', this.purchaseData)
+                axios.post('/api/purchases', this.purchaseData)
                     .then(response => {
-                        console.log(response);
-                        this.$router.push('/'); // TODO dare un avviso di successo
+                        this.$swal(
+                            'Complimenti!',
+                            "Grazie per l'acquisto",
+                            'success'
+                        ).then(() => {
+                                this.$router.push('/');
+                            }
+                        );
                     })
                     .catch(error => {
                         console.log(error);

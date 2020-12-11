@@ -9,8 +9,7 @@
                     <th>Username</th>
                     <th>Email</th>
                     <th>Categoria</th>
-                    <th>Nome</th>
-                    <th>Cognome</th>
+                    <th>Nome / Cognome</th>
                     <th>Citta'</th>
                     <th></th>
                 </tr>
@@ -21,8 +20,7 @@
                     <td>{{ customer.username }}</td>
                     <td>{{ customer.email }}</td>
                     <td>{{ customer.category.name }}</td>
-                    <td class="text-nowrap">{{ customer.firstname }}</td>
-                    <td class="text-nowrap">{{ customer.lastname }}</td>
+                    <td class="text-nowrap">{{ customer.firstname }} {{ customer.lastname }}</td>
                     <td class="text-nowrap">{{ customer.city }}</td>
                     <td>
                         <button type="button" class="btn btn-primary btn-sm"
