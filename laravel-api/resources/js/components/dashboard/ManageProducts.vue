@@ -1,7 +1,7 @@
 <template>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
         <h2>Prodotti</h2>
-        <button class="btn btn-primary mb-2" @click="notifyClick('ProductCreate')">Nuovo prodotto</button>
+        <router-link to="/dashboard/products/new" class="btn btn-primary mb-2">Nuovo prodotto</router-link>
         <div class="table-responsive">
             <table class="table table-striped table-sm">
                 <thead>
@@ -23,8 +23,10 @@
                     <td class="text-nowrap">€ {{ product.price }}</td>
                     <td>
                         <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm" @click="notifyClick('ProductEdit', {product: product})">Modifica</button>
-                        <button type="button" class="btn btn-danger btn-sm float-right" @click="deleteProduct(product)">Rimuovi</button>
+                            <router-link :to="{name: 'ProductEdit', params: {product: product}}" class="btn btn-primary btn-sm">
+                                Modifica
+                            </router-link>
+                            <button type="button" class="btn btn-danger btn-sm float-right" @click="deleteProduct(product)">Rimuovi</button>
                         </div>
                     </td>
                 </tr>
@@ -49,9 +51,6 @@ export default {
         this.loadProducts();
     },
     methods: {
-        notifyClick(componentName, param) {
-            this.$emit('buttonClick', componentName, param)
-        },
         loadProducts: function (page = 1) {
             // load API
             axios.get('/api/products?page=' + page)

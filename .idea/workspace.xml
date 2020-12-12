@@ -3,10 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/DashboardHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/DashboardHome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/CustomerDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/CustomerDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCategories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCategories.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCustomers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageCustomers.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageProducts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManageProducts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManagePurchases.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/ManagePurchases.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/PurchaseDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/PurchaseDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/SideMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/views/Dashboard.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +222,7 @@
       <workItem from="1607094485208" duration="20314000" />
       <workItem from="1607333768547" duration="19726000" />
       <workItem from="1607361807619" duration="61742000" />
-      <workItem from="1607623824556" duration="37288000" />
+      <workItem from="1607623824556" duration="51732000" />
     </task>
     <servers />
   </component>

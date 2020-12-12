@@ -3,34 +3,34 @@
         <div class="sidebar-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item mb-2">
-                    <button class="btn btn-link" @click="notifyClick('DashboardHome')">
+                    <router-link to="/dashboard" class="btn btn-link">
                         <span data-feather="home"></span>
                         Dashboard
-                    </button>
+                    </router-link>
                 </li>
                 <li class="nav-item mb-2">
-                    <button class="btn btn-link" @click="notifyClick('ManageProducts')">
+                    <router-link to="/dashboard/products" class="btn btn-link">
                         <span data-feather="shopping-cart"></span>
                         Prodotti
-                    </button>
+                    </router-link>
                 </li>
                 <li class="nav-item mb-2">
-                    <button class="btn btn-link" @click="notifyClick('ManageCategories')">
+                    <router-link to="/dashboard/categories" class="btn btn-link">
                         <span data-feather="file"></span>
                         Categorie
-                    </button>
+                    </router-link>
                 </li>
                 <li class="nav-item mb-2">
-                    <button class="btn btn-link" @click="notifyClick('ManageCustomers')">
+                    <router-link to="/dashboard/customers" class="btn btn-link">
                         <span data-feather="users"></span>
                         Clienti
-                    </button>
+                    </router-link>
                 </li>
                 <li class="nav-item mb-2">
-                    <button class="btn btn-link" @click="notifyClick('ManagePurchases')">
+                    <router-link to="/dashboard/purchases" class="btn btn-link">
                         <span data-feather="file-text"></span>
                         Ordini
-                    </button>
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -41,12 +41,8 @@
 export default {
     name: "SideMenu",
     mounted() {
-        this.notifyClick('DashboardHome');
-    },
-    methods: {
-        notifyClick(componentName) {
-            this.$emit('menuItemClick', componentName)
-        }
+        // Icons
+        feather.replace();
     }
 }
 </script>

@@ -23,10 +23,9 @@
                     <td class="text-nowrap">{{ customer.firstname }} {{ customer.lastname }}</td>
                     <td class="text-nowrap">{{ customer.city }}</td>
                     <td>
-                        <button type="button" class="btn btn-primary btn-sm"
-                                @click="notifyClick('CustomerDetails', {customer: customer})">
+                        <router-link :to="{name: 'CustomerDetails', params: {customer: customer}}" class="btn btn-primary btn-sm">
                             Dettagli
-                        </button>
+                        </router-link>
                     </td>
                 </tr>
                 </tbody>
@@ -50,9 +49,6 @@ export default {
         this.loadCustomers();
     },
     methods: {
-        notifyClick(componentName, param) {
-            this.$emit('buttonClick', componentName, param)
-        },
         loadCustomers: function (page = 1) {
             // load API
             axios.get('/api/customers?page=' + page)
@@ -60,7 +56,6 @@ export default {
                     this.customers = response.data;
                 })
                 .catch(function (error) {
-                    // catch errors
                     console.log(error);
                 });
         }

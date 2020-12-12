@@ -65,7 +65,7 @@
             <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-2">
                     <button type="button" class="btn btn-primary"
-                        @click="notifyClick('ManageCustomers')">
+                        @click="$router.back()">
                         Indietro
                     </button>
                 </div>
@@ -77,12 +77,7 @@
 <script>
 export default {
     name: "CustomerDetails",
-    props: ['customer'],
-    methods: {
-        notifyClick(componentName, param) {
-            this.$emit('buttonClick', componentName, param)
-        }
-    }
+    props: ['customer']
 }
 </script>
 

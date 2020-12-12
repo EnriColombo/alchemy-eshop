@@ -21,10 +21,9 @@
                     <td>{{ purchase.cart.items_no }}</td>
                     <td>€ {{ purchase.total }}</td>
                     <td>
-                        <button type="button" class="btn btn-primary btn-sm"
-                                @click="notifyClick('PurchaseDetails', {purchase: purchase})">
+                        <router-link :to="{name: 'PurchaseDetails', params: {purchase: purchase}}" class="btn btn-primary btn-sm">
                             Dettagli
-                        </button>
+                        </router-link>
                     </td>
                 </tr>
                 </tbody>
