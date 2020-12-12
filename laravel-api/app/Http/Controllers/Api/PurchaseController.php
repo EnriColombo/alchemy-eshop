@@ -5,12 +5,12 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\PurchaseResource;
 use App\Models\Cart;
-use App\Models\Customer;
 use App\Models\Purchase;
 use App\Services\CustomerService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PurchaseController extends Controller
 {
@@ -29,6 +29,22 @@ class PurchaseController extends Controller
     public function index()
     {
         return PurchaseResource::collection(Purchase::paginate(10));
+    }
+
+    /**
+     * Dashboard chart:
+     * estrae le vendite degli ultimi 7 giorni
+     * raggruppate per giorno e ne conta il numero per ciascun giorno.
+     *
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
+    public function indexChartData()
+    {
+        $dailyPurchases = Purchase::select(DB::raw('count(*) as purchase_count, date'))
+                        ->whereDate('date', '>=', Carbon::now()->subDays(7))
+                        ->groupBy('date')
+                        ->get();
+        return response()->json($dailyPurchases);
     }
 
     /**

@@ -62,4 +62,5 @@ Route::middleware(['auth:api', 'api.admin'])->group(function () {
     Route::apiResource('customers', CustomerController::class);
     // Purchases
     Route::apiResource('purchases', PurchaseController::class)->except(['store']);
+    Route::get('chartdata', [PurchaseController::class, 'indexChartData']);
 });
