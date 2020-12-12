@@ -40,9 +40,9 @@ class PurchaseController extends Controller
      */
     public function indexChartData()
     {
-        $dailyPurchases = Purchase::select(DB::raw('count(*) as purchase_count, date'))
+        $dailyPurchases = Purchase::select(DB::raw("count(*) as purchase_count, DATE(date) as date"))
                         ->whereDate('date', '>=', Carbon::now()->subDays(7))
-                        ->groupBy('date')
+                        ->groupBy(DB::raw('DATE(date)'))
                         ->get();
         return response()->json($dailyPurchases);
     }

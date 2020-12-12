@@ -51,7 +51,7 @@ export default {
             let x = new Array(this.purchases.length);
             for (let i = 0; i < x.length; i++) {
                 x[i] = [
-                        new Date(this.purchases[i].date).toISOString().slice(0,10),
+                        this.purchases[i].date,
                         this.purchases[i].purchase_count
                        ];
             }
