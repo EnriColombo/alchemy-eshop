@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/app/Http/Controllers/Api/PurchaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/DashboardHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/resources/js/components/dashboard/DashboardHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/database/migrations/2020_11_02_093942_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/database/migrations/2020_11_02_093942_create_customers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-api/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-api/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel-api/resources/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel-api/database/factories" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -176,11 +176,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/laravel-api/database/factories" />
       <recent name="$PROJECT_DIR$/laravel-api/resources/css" />
       <recent name="$PROJECT_DIR$/laravel-api/resources/js" />
       <recent name="$PROJECT_DIR$/laravel-api/database/seeders" />
       <recent name="$PROJECT_DIR$/laravel-api/database/migrations" />
-      <recent name="$PROJECT_DIR$/laravel-api/database/factories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/laravel-api/resources/css" />
@@ -204,7 +204,8 @@
       <workItem from="1607094485208" duration="20314000" />
       <workItem from="1607333768547" duration="19726000" />
       <workItem from="1607361807619" duration="61742000" />
-      <workItem from="1607623824556" duration="54011000" />
+      <workItem from="1607623824556" duration="60790000" />
+      <workItem from="1607938500473" duration="9040000" />
     </task>
     <servers />
   </component>
