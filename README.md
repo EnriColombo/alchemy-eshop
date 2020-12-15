@@ -13,7 +13,7 @@ Progetto di esempio per un e-commerce.
 - vue-sweetalert2
 - vue-chartkick (chart.js)
 ## Demo
-Una demo di esempio è visibile qui: [alchemy-eshop.test](http://alchemy-eshop.test)
+Una demo di esempio è visibile qui: [alchemy-eshop.herokuapp.com](http://alchemy-eshop.herokuapp.com)
 ## Utente 'admin'
 E' disponibile un utente per l'accesso alla dashboard di amministrazione con le seguenti credenziali:
 - email: `admin@alchemy-eshop.test`
