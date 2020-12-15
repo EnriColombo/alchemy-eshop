@@ -28,7 +28,7 @@ class PurchaseController extends Controller
      */
     public function index()
     {
-        return PurchaseResource::collection(Purchase::paginate(10));
+        return PurchaseResource::collection(Purchase::orderBy('date', 'desc')->paginate(10));
     }
 
     /**
