@@ -253,7 +253,6 @@ export default {
             if (!this.$v.customerData.$invalid && !this.$v.paymentData.$invalid) {
                 this.purchaseData.customer = this.customerData;
                 this.purchaseData.payment = this.paymentData;
-                console.log(JSON.stringify(this.purchaseData));
                 axios.post('/api/purchases', this.purchaseData)
                     .then(response => {
                         this.$swal(

@@ -77,15 +77,24 @@ export default {
                 });
         },
         deleteItem(item) {
-            if (confirm("Vuoi rimuovere il prodotto dal carrello?")) {
-                axios.delete('/api/cart/' + item.id, item).then(response => {
-                    // Non aggiorna il totale
-                    // this.userCart.items.splice(this.userCart.items.indexOf(item), 1);
-                    this.loadItems();
-                }).catch(error => {
-                    console.log(error);
-                });
-            }
+            this.$swal({
+                icon: 'question',
+                title: 'Vuoi rimuovere il prodotto dal carrello?',
+                showCancelButton: true,
+                confirmButtonText: `Rimuovi`,
+                confirmButtonColor: '#d33',
+                cancelButtonText: 'Annulla'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    axios.delete('/api/cart/' + item.id, item).then(response => {
+                        // Non aggiorna il totale
+                        // this.userCart.items.splice(this.userCart.items.indexOf(item), 1);
+                        this.loadItems();
+                    }).catch(error => {
+                        console.log(error);
+                    });
+                }
+            })
         },
         goToCheckout()
         {
