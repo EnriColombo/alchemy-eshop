@@ -33,7 +33,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return ProductCategoryResource::collection(ProductCategory::all());
+        return ProductCategoryResource::collection($this->categoryRepository->getAllProductCategories());
     }
 
     /**
@@ -56,7 +56,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $category = ProductCategory::findOrFail($id);
+        $category = $this->categoryRepository->findProductCategory($id);
         return new ProductCategoryResource($category);
     }
 

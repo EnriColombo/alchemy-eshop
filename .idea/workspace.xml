@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45b8e274-545f-4a7c-b4ad-5be57763f5da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +170,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel-api/database/factories" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -217,7 +219,8 @@
       <workItem from="1608313784755" duration="12000" />
       <workItem from="1608570000189" duration="174000" />
       <workItem from="1608570239155" duration="2100000" />
-      <workItem from="1608720932936" duration="5219000" />
+      <workItem from="1608720932936" duration="9939000" />
+      <workItem from="1611221818854" duration="1568000" />
     </task>
     <servers />
   </component>
