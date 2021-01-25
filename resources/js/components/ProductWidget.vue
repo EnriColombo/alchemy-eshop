@@ -15,6 +15,7 @@
 
 <script>
 import axios from "axios";
+import Vue from "vue";
 
 export default {
     name: "ProductWidget",
@@ -50,8 +51,15 @@ export default {
                 })
                 .catch(function (error) {
                     console.log(error);
-                    // Redirect to Laravel' route 'login'
-                    window.location.href = '/login';
+                    Vue.swal(
+                        '',
+                        "E' necessario accedere o registrarsi",
+                        'info'
+                    ).then(() => {
+                            // Redirect to Laravel' route 'login'
+                            window.location.href = '/login';
+                        }
+                    );
                 });
             // Refresh CartWidget
             this.$root.$emit('Prodotto aggiunto al carrello');
