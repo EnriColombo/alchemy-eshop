@@ -13,7 +13,7 @@
                     <h6 class="my-0">{{ item.product.name }}</h6>
                     <small class="text-muted">{{ item.product.description.substr(0, 40) }} ...</small>
                 </div>
-                <span class="text-muted">€{{ item.product.price }}</span>
+                <span class="text-muted">€{{ getItemTotal(item).toFixed(2) }}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between">
                 <span>Total (EUR)</span>
@@ -22,6 +22,7 @@
         </ul>
         <div class="d-flex justify-content-end" v-if="!error">
             <button type="button" class="btn btn-secondary" @click="goToCart" v-show="$route.name != 'checkout'">Vai al carrello</button>
+            <button type="button" class="btn btn-secondary" @click="goToCart" v-show="$route.name == 'checkout'">Modifica il carrello</button>
         </div>
     </div>
 </template>
@@ -58,6 +59,10 @@ export default {
         },
         goToCart() {
             this.$router.push('/cart');
+        },
+        getItemTotal(item)
+        {
+            return item.quantity * item.product.price;
         }
     }
 }

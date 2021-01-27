@@ -41,6 +41,8 @@ Route::middleware('auth:api')->group(function () {
     Route::post('cart', [CartController::class, 'store']);
     // Delete a cart item (delete cart if it is empty)
     Route::delete('cart/{cartItem}', [CartController::class, 'destroy']);
+    // Update a cart
+    Route::put('cart/{cart}', [CartController::class, 'update']);
     // Create a new Purchase
     Route::post('purchases', [PurchaseController::class, 'store']);
 });

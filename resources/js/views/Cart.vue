@@ -17,7 +17,7 @@
                         <input type="number" class="form-control" required v-model.number="item.quantity" @change="updateCartTotal">
                     </div>
                     <div class="d-flex align-items-end flex-column ml-3">
-                        <div class="text-muted">€{{ getItemTotal(item) }}</div>
+                        <div class="text-muted">€{{ getItemTotal(item).toFixed(2) }}</div>
                         <div class="mt-auto">
                             <button class="btn btn-danger btn-sm" @click="deleteItem(item)">Elimina</button>
                         </div>
@@ -95,26 +95,36 @@ export default {
                 }
             })
         },
-        goToCheckout()
-        {
-            // TODO deve salvare sul db
-            this.$router.push('/checkout');
-        },
-        goHome()
-        {
-            // TODO deve salvare sul db
-            this.$router.push('/');
-        },
         updateCartTotal()
         {
             this.userCart.total = 0;
+            let total = 0;
             this.userCart.items.forEach(item => {
-                this.userCart.total += this.getItemTotal(item);
+                total += this.getItemTotal(item);
             });
+            this.userCart.total = new Intl.NumberFormat().format(total);
         },
         getItemTotal(item)
         {
             return item.quantity * item.product.price;
+        },
+        goToCheckout()
+        {
+            this.dbCartUpdate();
+            this.$router.push('/checkout');
+        },
+        goHome()
+        {
+            this.dbCartUpdate();
+            this.$router.push('/');
+        },
+        dbCartUpdate()
+        {
+            // Aggiornamento carrello sul db
+            axios.put('/api/cart/' + this.userCart.id, this.userCart).then(response => {})
+                .catch(error => {
+                    console.log(error);
+                });
         }
     }
 }
