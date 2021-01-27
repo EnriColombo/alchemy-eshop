@@ -7,12 +7,11 @@ use App\Http\Resources\CartItemResource;
 use App\Http\Resources\CartResource;
 use App\Models\Cart;
 use App\Models\CartItem;
-use App\Models\Customer;
 use App\Services\CustomerService;
-use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class CartController extends Controller
 {
@@ -86,15 +85,26 @@ class CartController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Aggiorna il carrello completo (in pratica le q.tà di ciascun item).
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cart $cart)
     {
-        //
+        $input = $request->all();
+
+        foreach ($cart->cartItems as $key=>$item) {
+            $item->update($input['items'][$key]);
+        }
+
+        // return response
+        $response = [
+            'success' => true,
+            'message' => 'Cart updated successfully.',
+        ];
+        return response()->json($response, 200);
     }
 
     /**

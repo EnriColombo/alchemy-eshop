@@ -9,15 +9,15 @@
                 <li class="list-group-item d-flex justify-content-between lh-condensed" v-for="item in userCart.items" :key="item.id">
                     <img src="http://placehold.it/120x80" alt="">
                     <div class="col m-3">
-                        <h6 class="my-0">{{ item.product.name }}</h6>
+                        <h6 class="my-0">{{ item.product.name }} (€{{ item.product.price }})</h6>
                         <small class="text-muted">{{ item.product.description }}</small>
                     </div>
                     <div class="col-sm-1">
                         <h6 class="mb-2">Q.ta'</h6>
-                        <input type="number" class="form-control" required value="1">
+                        <input type="number" class="form-control" required v-model.number="item.quantity" @change="updateCartTotal">
                     </div>
                     <div class="d-flex align-items-end flex-column ml-3">
-                        <div class="text-muted">€{{ item.product.price }}</div>
+                        <div class="text-muted">€{{ getItemTotal(item).toFixed(2) }}</div>
                         <div class="mt-auto">
                             <button class="btn btn-danger btn-sm" @click="deleteItem(item)">Elimina</button>
                         </div>
@@ -87,22 +87,44 @@ export default {
             }).then((result) => {
                 if (result.isConfirmed) {
                     axios.delete('/api/cart/' + item.id, item).then(response => {
-                        // Non aggiorna il totale
-                        // this.userCart.items.splice(this.userCart.items.indexOf(item), 1);
-                        this.loadItems();
+                        this.userCart.items.splice(this.userCart.items.indexOf(item), 1);
+                        this.updateCartTotal();
                     }).catch(error => {
                         console.log(error);
                     });
                 }
             })
         },
+        updateCartTotal()
+        {
+            this.userCart.total = 0;
+            let total = 0;
+            this.userCart.items.forEach(item => {
+                total += this.getItemTotal(item);
+            });
+            this.userCart.total = new Intl.NumberFormat().format(total);
+        },
+        getItemTotal(item)
+        {
+            return item.quantity * item.product.price;
+        },
         goToCheckout()
         {
-            this.$router.push('/checkout')
+            this.dbCartUpdate();
+            this.$router.push('/checkout');
         },
         goHome()
         {
-            this.$router.push('/')
+            this.dbCartUpdate();
+            this.$router.push('/');
+        },
+        dbCartUpdate()
+        {
+            // Aggiornamento carrello sul db
+            axios.put('/api/cart/' + this.userCart.id, this.userCart).then(response => {})
+                .catch(error => {
+                    console.log(error);
+                });
         }
     }
 }

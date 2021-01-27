@@ -28,7 +28,7 @@ class Cart extends Model
     public function cartTotal() {
         $total = 0;
         foreach ($this->cartItems as $item) {
-            $total += $item->product->price;
+            $total += $item->product->price * $item->quantity;
         }
         return $total;
     }
